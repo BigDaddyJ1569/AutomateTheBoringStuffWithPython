@@ -22,13 +22,13 @@ def dx():
   d12 = [d12i for d12i in range(12)]
   d20 = [d20i for d20i in range(20)]
 
-  def rollEm():
-    d4Rolls = d4Input.get()
-    d6Rolls = d6Input.get()
-    d8Rolls = d8Input.get()
-    d10Rolls = d10Input.get()
-    d12Rolls = d12Input.get()
-    d20Rolls = d20Input.get()
+def rollEm():
+  d4Rolls = d4Input.get()
+  d6Rolls = d6Input.get()
+  d8Rolls = d8Input.get()
+  d10Rolls = d10Input.get()
+  d12Rolls = d12Input.get()
+  d20Rolls = d20Input.get()
   
 #this establishes that I will be using a GUI
 root = tk.Tk()
@@ -99,7 +99,7 @@ d20Input.pack()
 root.mainloop()
 
 
-
+#Old code that might be useful  ¯\_(ツ)_/¯
 #print("Hey Bozo! How many dice do you want to roll?")
 #dQuantity = input()
 
