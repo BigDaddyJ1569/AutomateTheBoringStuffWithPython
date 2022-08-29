@@ -22,6 +22,7 @@ def dx():
   d12 = [d12i for d12i in range(12)]
   d20 = [d20i for d20i in range(20)]
 
+#Getting the text inputs from the gui and assigning them into variables?
 def rollEm():
   d4Rolls = d4Input.get()
   d6Rolls = d6Input.get()
