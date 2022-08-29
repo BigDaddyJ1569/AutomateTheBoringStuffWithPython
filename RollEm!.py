@@ -5,7 +5,7 @@
 import random, math 
 #importing the GUI function
 import tkinter as tk
-from tkinter import filedialog, Text
+from tkinter import Entry, Label, filedialog, Text
 import os
 
 #var for quantity of dice rolled
@@ -39,6 +39,48 @@ frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
 ButtonRoll = tk.Button(root, text="Roll 'em!", padx=10, pady=10, fg="white", bg="black")
 #attaches button to the canvas
 ButtonRoll.pack()
+
+#This is where the d4 Label is created so you know what text box you are entering for
+d4TextBox = Label(frame, text="How many D4 would you like to roll?")
+#This is where the d4 quantity input is created and inserted.
+d4Input = Entry(frame, width= 10)
+d4TextBox.pack()
+d4Input.pack()
+
+#This is where the d6 Label is created so you know what text box you are entering for
+d6TextBox = Label(frame, text="How many D6 would you like to roll?")
+#This is where the d6 quantity input is created and inserted.
+d6Input = Entry(frame, width= 10)
+d6TextBox.pack()
+d6Input.pack()
+
+#This is where the d8 Label is created so you know what text box you are entering for
+d8TextBox = Label(frame, text="How many D8 would you like to roll?")
+#This is where the d8 quantity input is created and inserted.
+d8Input = Entry(frame, width= 10)
+d8TextBox.pack()
+d8Input.pack()
+
+#This is where the d10 Label is created so you know what text box you are entering for
+d10TextBox = Label(frame, text="How many D10 would you like to roll?")
+#This is where the d4 quantity input is created and inserted.
+d10Input = Entry(frame, width= 10)
+d10TextBox.pack()
+d10Input.pack()
+
+#This is where the d12 Label is created so you know what text box you are entering for
+d12TextBox = Label(frame, text="How many D12 would you like to roll?")
+#This is where the d12 quantity input is created and inserted.
+d12Input = Entry(frame, width= 10)
+d12TextBox.pack()
+d12Input.pack()
+
+#This is where the d20 Label is created so you know what text box you are entering for
+d20TextBox = Label(frame, text="How many D20 would you like to roll?")
+#This is where the D20 quantity input is created and inserted.
+d20Input = Entry(frame, width= 10)
+d20TextBox.pack()
+d20Input.pack()
 
 #displays the GUI
 root.mainloop()
