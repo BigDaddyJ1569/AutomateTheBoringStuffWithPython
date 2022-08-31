@@ -110,6 +110,6 @@ root.mainloop()
 
 #for idx, num in enumerate(dQuantity):
    # print(random.randint(1,10))
- #  print("it worked!")
+ #  print("it worked! This concludes this test.")
 #print(dQuantity)
 
