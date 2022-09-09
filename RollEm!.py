@@ -31,9 +31,16 @@ def rollEm():
   d10Q = d10Input.get()
   d12Q = d12Input.get()
   d20Q = d20Input.get()
+  
 
-def diceMath():
-  pass
+def diceMath(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q, d4, d6, d8, d10, d12, d20):
+  d4Op = d4Q * d4
+  d6Op = d6Q * d6
+  d8Op = d8Q * d8
+  d10Qp = d10Q * d10
+  d12Qp = d12Q * d12
+  d20Qp = d20Q * d20
+  
 
 #this establishes that I will be using a GUI
 root = tk.Tk()
