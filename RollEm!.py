@@ -37,10 +37,10 @@ def diceMath(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q, d4, d6, d8, d10, d12, d20):
   d4Op = d4Q * d4
   d6Op = d6Q * d6
   d8Op = d8Q * d8
-  d10Qp = d10Q * d10
-  d12Qp = d12Q * d12
-  d20Qp = d20Q * d20
-  
+  d10Op = d10Q * d10
+  d12Op = d12Q * d12
+  d20Op = d20Q * d20
+  return d4Op, d6Op, d8Op, d10Op, d12Op, d20Op
 
 #this establishes that I will be using a GUI
 root = tk.Tk()
@@ -64,6 +64,7 @@ ButtonRoll.pack()
 d4TextBox = Label(frame, text='How many D4 would you like to roll?', font= ('Helvetica',12))
 #This is where the d4 quantity input is created and inserted.
 d4Input = Entry(frame, width= 10, borderwidth= 5)
+#d4Output = Label(frame, text= d4Op)
 d4TextBox.pack()
 d4Input.pack()
 
@@ -71,6 +72,7 @@ d4Input.pack()
 d6TextBox = Label(frame, text='How many D6 would you like to roll?', font= ('Helvetica',12))
 #This is where the d6 quantity input is created and inserted.
 d6Input = Entry(frame, width= 10, borderwidth= 5)
+#d6Output = Label(frame, text= d6Op)
 d6TextBox.pack()
 d6Input.pack()
 
@@ -78,6 +80,7 @@ d6Input.pack()
 d8TextBox = Label(frame, text='How many D8 would you like to roll?', font= ('Helvetica',12))
 #This is where the d8 quantity input is created and inserted.
 d8Input = Entry(frame, width= 10, borderwidth= 5)
+#d8Output = Label(frame, text= d8Op)
 d8TextBox.pack()
 d8Input.pack()
 
@@ -85,6 +88,7 @@ d8Input.pack()
 d10TextBox = Label(frame, text='How many D10 would you like to roll?', font= ('Helvetica',12))
 #This is where the d4 quantity input is created and inserted.
 d10Input = Entry(frame, width= 10, borderwidth= 5)
+#d10Output = Label(frame, text= d10Op)
 d10TextBox.pack()
 d10Input.pack()
 
@@ -92,6 +96,7 @@ d10Input.pack()
 d12TextBox = Label(frame, text='How many D12 would you like to roll?', font= ('Helvetica',12))
 #This is where the d12 quantity input is created and inserted.
 d12Input = Entry(frame, width= 10, borderwidth= 5)
+#d12Output = Label(frame, text= d12Op)
 d12TextBox.pack()
 d12Input.pack()
 
@@ -99,6 +104,7 @@ d12Input.pack()
 d20TextBox = Label(frame, text='How many D20 would you like to roll?', font= ('Helvetica',12))
 #This is where the D20 quantity input is created and inserted.
 d20Input = Entry(frame, width= 10, borderwidth= 5)
+#d20Output = Label(frame, text= d20Op)
 d20TextBox.pack()
 d20Input.pack()
 
