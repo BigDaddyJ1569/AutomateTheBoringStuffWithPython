@@ -16,12 +16,12 @@ dSides = 0
 #defining function for each of the dice options
 def diceRanges(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q):
 
-    d4 = []
-    d6 = []
-    d8 = []
-    d10 = []
-    d12 = []
-    d20 = []
+    d4 = [0]
+    d6 = [0]
+    d8 = [0]
+    d10 = [0]
+    d12 = [0]
+    d20 = [0]
 #error checking these
     for i in range(1, int(d4Q)+1):
         d4.append(random.randint(1,4))
@@ -57,70 +57,65 @@ root = tk.Tk()
 #establishes the title for our GUI
 root.title('RollEm! a TTRPG Dice Roller')
 #setting up how the canvas should be displayed
-canvas = tk.Canvas(root, height=700, width=700, bg="Black")
-#pack just says to put it onto the screen
-canvas.pack()
+root.geometry("420x420")  # set starting size of window
+Title = Label(root, text = "Roll Em!")
 
-#creates the space in the middle to be framed
-frame = tk.Frame(root, bg="Green")
-#determines the settings of the space that's being framed
-frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+    
+d4Input = Entry(root, textvariable=[1,4])
+d6Input = Entry(root, textvariable=[1,6])
+d8Input = Entry(root, textvariable=[1,8])
+d10Input = Entry(root, textvariable=[1,10])
+d12Input = Entry(root, textvariable=[1,12])
+d20Input = Entry(root, textvariable=[1,20])
 
-ButtonRoll = tk.Button(root, text="Roll 'em!", padx=10, pady=10, fg="white", bg="black", command= rollEm)
-#attaches button to the canvas
-ButtonRoll.pack()
-
-#This is where the d4 Label is created so you know what text box you are entering for
-d4TextBox = Label(frame, text='How many D4 would you like to roll?', font= ('Helvetica',12))
-#This is where the d4 quantity input is created and inserted.
-d4Input = Entry(frame, width= 10, borderwidth= 5)
-#d4Output = Label(frame, text= d4Op)
-d4TextBox.pack()
-d4Input.pack()
-
-#This is where the d6 Label is created so you know what text box you are entering for
-d6TextBox = Label(frame, text='How many D6 would you like to roll?', font= ('Helvetica',12))
-#This is where the d6 quantity input is created and inserted.
-d6Input = Entry(frame, width= 10, borderwidth= 5)
-#d6Output = Label(frame, text= d6Op)
-d6TextBox.pack()
-d6Input.pack()
-
-#This is where the d8 Label is created so you know what text box you are entering for
-d8TextBox = Label(frame, text='How many D8 would you like to roll?', font= ('Helvetica',12))
-#This is where the d8 quantity input is created and inserted.
-d8Input = Entry(frame, width= 10, borderwidth= 5)
-#d8Output = Label(frame, text= d8Op)
-d8TextBox.pack()
-d8Input.pack()
-
-#This is where the d10 Label is created so you know what text box you are entering for
-d10TextBox = Label(frame, text='How many D10 would you like to roll?', font= ('Helvetica',12))
-#This is where the d4 quantity input is created and inserted.
-d10Input = Entry(frame, width= 10, borderwidth= 5)
-#d10Output = Label(frame, text= d10Op)
-d10TextBox.pack()
-d10Input.pack()
-
-#This is where the d12 Label is created so you know what text box you are entering for
-d12TextBox = Label(frame, text='How many D12 would you like to roll?', font= ('Helvetica',12))
-#This is where the d12 quantity input is created and inserted.
-d12Input = Entry(frame, width= 10, borderwidth= 5)
-#d12Output = Label(frame, text= d12Op)
-d12TextBox.pack()
-d12Input.pack()
-
-#This is where the d20 Label is created so you know what text box you are entering for
-d20TextBox = Label(frame, text='How many D20 would you like to roll?', font= ('Helvetica',12))
-#This is where the D20 quantity input is created and inserted.
-d20Input = Entry(frame, width= 10, borderwidth= 5)
-#d20Output = Label(frame, text= d20Op)
-d20TextBox.pack()
-d20Input.pack()
+# grid method to arrange labels in respective
+# rows and columns as specified
+Title.grid(row = 0, column = 0, sticky = W, pady = 2)
 
 
-#Working towards outputting the desired rolls
-#d4RollTextBox = Label(frame, d4Rolls)
+d4 = Label(root, text = "How many d4 would you like to roll?")
+d4.grid(row = 1, column = 0, sticky = W, pady = 2)
+d4Input.grid(row = 1, column = 1, pady = 2)
+#
+
+d6 = Label(root, text = "How many d6 would you like to roll?")
+d6.grid(row = 3, column = 0, pady = 2)
+d6Input.grid(row = 3, column = 1)
+#
+
+d8 = Label(root, text = "How many d8 would you like to roll?")
+d8.grid(row = 5, column = 0, sticky = W, pady = 2)
+d8Input.grid(row = 5, column = 1)
+#
+
+d10 = Label(root, text = "How many d10 would you like to roll?")
+d10.grid(row = 7, column = 0, sticky = W, pady = 2)
+d10Input.grid(row = 7, column = 1)
+#
+
+d12 = Label(root, text = "How many d12 would you like to roll?")
+d12.grid(row = 9, column = 0, sticky = W, pady = 2)
+d12Input.grid(row = 9, column = 1)
+#
+
+d20 = Label(root, text = "How many d20 would you like to roll?")
+d20.grid(row = 11, column = 0, sticky = W, pady = 2)
+d20Input.grid(row = 11, column = 1)
+#
+
+RollButton = Button(root, text= "Roll Em!", command=rollEm).grid()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #displays the GUI/End of the GUI section
@@ -136,3 +131,70 @@ root.mainloop()
  #  print("it worked! This concludes this test.")
 #print(dQuantity)
 
+
+#canvas = tk.Canvas(root, height=700, width=700, bg="Black")
+#
+#pack just says to put it onto the screen:
+#canvas.pack()
+#
+
+#creates the space in the middle to be framed
+#frame = tk.Frame(root, bg="Green")
+#determines the settings of the space that's being framed
+#frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+
+#ButtonRoll = tk.Button(root, text="Roll 'em!", padx=10, pady=10, fg="white", bg="black", command= rollEm)
+#attaches button to the canvas
+#ButtonRoll.pack()
+
+#This is where the d4 Label is created so you know what text box you are entering for
+#d4TextBox = Label(frame, text='How many D4 would you like to roll?', font= ('Helvetica',12))
+#This is where the d4 quantity input is created and inserted.
+#d4Input = Entry(frame, width= 10, borderwidth= 5)
+#d4Output = Label(frame, text= d4Op)
+#d4TextBox.pack()
+#d4Input.pack()
+
+#This is where the d6 Label is created so you know what text box you are entering for
+#d6TextBox = Label(frame, text='How many D6 would you like to roll?', font= ('Helvetica',12))
+#This is where the d6 quantity input is created and inserted.
+#d6Input = Entry(frame, width= 10, borderwidth= 5)
+#d6Output = Label(frame, text= d6Op)
+#d6TextBox.pack()
+#d6Input.pack()
+
+#This is where the d8 Label is created so you know what text box you are entering for
+#d8TextBox = Label(frame, text='How many D8 would you like to roll?', font= ('Helvetica',12))
+#This is where the d8 quantity input is created and inserted.
+#d8Input = Entry(frame, width= 10, borderwidth= 5)
+#d8Output = Label(frame, text= d8Op)
+#d8TextBox.pack()
+#d8Input.pack()
+
+#This is where the d10 Label is created so you know what text box you are entering for
+#d10TextBox = Label(frame, text='How many D10 would you like to roll?', font= ('Helvetica',12))
+#This is where the d4 quantity input is created and inserted.
+#d10Input = Entry(frame, width= 10, borderwidth= 5)
+#d10Output = Label(frame, text= d10Op)
+#d10TextBox.pack()
+#d10Input.pack()
+
+#This is where the d12 Label is created so you know what text box you are entering for
+#d12TextBox = Label(frame, text='How many D12 would you like to roll?', font= ('Helvetica',12))
+#This is where the d12 quantity input is created and inserted.
+#d12Input = Entry(frame, width= 10, borderwidth= 5)
+#d12Output = Label(frame, text= d12Op)
+#d12TextBox.pack()
+#d12Input.pack()
+
+#This is where the d20 Label is created so you know what text box you are entering for
+#d20TextBox = Label(frame, text='How many D20 would you like to roll?', font= ('Helvetica',12))
+#This is where the D20 quantity input is created and inserted.
+#d20Input = Entry(frame, width= 10, borderwidth= 5)
+#d20Output = Label(frame, text= d20Op)
+#d20TextBox.pack()
+#d20Input.pack()
+
+
+#Working towards outputting the desired rolls
+#d4RollTextBox = Label(frame, d4Rolls)
