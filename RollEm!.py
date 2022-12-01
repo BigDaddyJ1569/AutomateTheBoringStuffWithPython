@@ -16,16 +16,40 @@ dSides = 0
 #defining function for each of the dice options
 def diceRanges(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q):
 
+    d4 = []
+    d6 = []
+    d8 = []
+    d10 = []
+    d12 = []
+    d20 = []
+#error checking these
+    for i in range(1, int(d4Q)+1):
+        d4.append(random.randint(1,4))
+    for i in range(1, int(d6Q)+1):
+        d6.append(random.randint(1,6))
+    for i in range(1, int(d8Q)+1):
+        d8.append(random.randint(1,8))
+    for i in range(1, int(d10Q)+1):
+        d10.append(random.randint(1,10))
+    for i in range(1, int(d12Q)+1):
+        d12.append(random.randint(1,12))
+    for i in range(1, int(d20Q)+1):
+        d20.append(random.randint(1,20))
+    return d4, d6, d8, d10, d12, d20    
 
 #defining function to Get the text inputs from the gui and assigning them into variables?
 def rollEm():
-  d4Q = d4Input.get()
-  d6Q = d6Input.get()
-  d8Q = d8Input.get()
-  d10Q = d10Input.get()
-  d12Q = d12Input.get()
-  d20Q = d20Input.get()
+    d4Q = d4Input.get()
+    d6Q = d6Input.get()
+    d8Q = d8Input.get()
+    d10Q = d10Input.get()
+    d12Q = d12Input.get()
+    d20Q = d20Input.get()
   
+    d4, d6, d8, d10, d12, d20 = diceRanges(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q)
+
+    print(d4, d6, d8, d10, d12, d20)
+
   
 
 #this establishes that I will be using a GUI
