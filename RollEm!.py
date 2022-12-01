@@ -15,12 +15,6 @@ dSides = 0
 
 #defining function for each of the dice options
 def diceRanges(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q):
-  d4 = [d4i for d4i in range(1, 4)]
-  d6 = [d6i for d6i in range(1, 6)]
-  d8 = [d8i for d8i in range(1, 8)]
-  d10 = [d10i for d10i in range(1, 10)]
-  d12 = [d12i for d12i in range(1, 12)]
-  d20 = [d20i for d20i in range(1, 20)]
 
 
 #defining function to Get the text inputs from the gui and assigning them into variables?
@@ -32,15 +26,7 @@ def rollEm():
   d12Q = d12Input.get()
   d20Q = d20Input.get()
   
-
-def diceMath(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q, d4, d6, d8, d10, d12, d20):
-  d4Op = d4Q * d4
-  d6Op = d6Q * d6
-  d8Op = d8Q * d8
-  d10Op = d10Q * d10
-  d12Op = d12Q * d12
-  d20Op = d20Q * d20
-  return d4Op, d6Op, d8Op, d10Op, d12Op, d20Op
+  
 
 #this establishes that I will be using a GUI
 root = tk.Tk()
