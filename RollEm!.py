@@ -16,12 +16,12 @@ dSides = 0
 #defining function for each of the dice options
 def diceRanges(d4Q, d6Q, d8Q, d10Q, d12Q, d20Q):
 
-    d4 = [0]
-    d6 = [0]
-    d8 = [0]
-    d10 = [0]
-    d12 = [0]
-    d20 = [0]
+    d4 = []
+    d6 = []
+    d8 = []
+    d10 = []
+    d12 = []
+    d20 = []
 #error checking these
     for i in range(1, int(d4Q)+1):
         d4.append(random.randint(1,4))
@@ -58,19 +58,17 @@ root = tk.Tk()
 root.title('RollEm! a TTRPG Dice Roller')
 #setting up how the canvas should be displayed
 root.geometry("420x420")  # set starting size of window
-Title = Label(root, text = "Roll Em!")
 
     
-d4Input = Entry(root, textvariable=[1,4])
-d6Input = Entry(root, textvariable=[1,6])
-d8Input = Entry(root, textvariable=[1,8])
-d10Input = Entry(root, textvariable=[1,10])
-d12Input = Entry(root, textvariable=[1,12])
-d20Input = Entry(root, textvariable=[1,20])
+d4Input = Entry(root)
+d6Input = Entry(root)
+d8Input = Entry(root)
+d10Input = Entry(root)
+d12Input = Entry(root)
+d20Input = Entry(root)
 
 # grid method to arrange labels in respective
 # rows and columns as specified
-Title.grid(row = 0, column = 0, sticky = W, pady = 2)
 
 
 d4 = Label(root, text = "How many d4 would you like to roll?")
