@@ -113,7 +113,8 @@ d20Text = Label(root, text = "How many d20 would you like to roll?", font='Calib
 d20Text.grid(row = 11, column = 0, sticky = W, pady = 2)
 d20Input.grid(row = 12, column = 0)
 #
-d20OutputText = Label(root, text = rollEm(d4))
+#d20OutputText = Label(root, text = rollEm(d4))
+d20OutputText = Label(root, text = "bazinga")
 d20OutputText.grid(row = 11, column = 1, pady = 2)
 
 RollButton = Button(root, text= "Roll Em!", command=rollEm).grid()
