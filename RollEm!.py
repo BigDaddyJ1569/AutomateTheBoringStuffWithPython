@@ -71,35 +71,50 @@ d20Input = Entry(root)
 # rows and columns as specified
 
 
-d4 = Label(root, text = "How many d4 would you like to roll?")
-d4.grid(row = 1, column = 0, sticky = W, pady = 2)
-d4Input.grid(row = 1, column = 1, pady = 2)
-#
+d4Text = Label(root, text = "How many d4 would you like to roll?", font='Calibri 10')
+d4Text.grid(row = 1, column = 0, sticky = W, pady = 2)
+#d4Input.grid(row = 1, column = 1, pady = 2)
+d4Input.grid(row = 2, column = 0)
+#gui d4 output
+#d4Output = diceRanges(d4)
+d4OutputText = Label(root, text = "bazinga")
+#d4OutputText.grid(row = 2, column = 0, pady = 2)
+d4OutputText.grid(row = 1, column = 1, pady = 2)
 
-d6 = Label(root, text = "How many d6 would you like to roll?")
-d6.grid(row = 3, column = 0, pady = 2)
-d6Input.grid(row = 3, column = 1)
+d6Text = Label(root, text = "How many d6 would you like to roll?", font='Calibri 10')
+d6Text.grid(row = 3, column = 0, pady = 2)
+d6Input.grid(row = 4, column = 0)
 #
+d6OutputText = Label(root, text = "bazinga")
+d6OutputText.grid(row = 3, column = 1, pady = 2)
 
-d8 = Label(root, text = "How many d8 would you like to roll?")
-d8.grid(row = 5, column = 0, sticky = W, pady = 2)
-d8Input.grid(row = 5, column = 1)
+d8Text = Label(root, text = "How many d8 would you like to roll?", font='Calibri 10')
+d8Text.grid(row = 5, column = 0, sticky = W, pady = 2)
+d8Input.grid(row = 6, column = 0)
 #
+d8OutputText = Label(root, text = "bazinga")
+d8OutputText.grid(row = 5, column = 1, pady = 2)
 
-d10 = Label(root, text = "How many d10 would you like to roll?")
-d10.grid(row = 7, column = 0, sticky = W, pady = 2)
-d10Input.grid(row = 7, column = 1)
+d10Text = Label(root, text = "How many d10 would you like to roll?", font='Calibri 10')
+d10Text.grid(row = 7, column = 0, sticky = W, pady = 2)
+d10Input.grid(row = 8, column = 0)
 #
+d10OutputText = Label(root, text = "bazinga")
+d10OutputText.grid(row = 7, column = 1, pady = 2)
 
-d12 = Label(root, text = "How many d12 would you like to roll?")
-d12.grid(row = 9, column = 0, sticky = W, pady = 2)
-d12Input.grid(row = 9, column = 1)
+d12Text = Label(root, text = "How many d12 would you like to roll?", font='Calibri 10')
+d12Text.grid(row = 9, column = 0, sticky = W, pady = 2)
+d12Input.grid(row = 10, column = 0)
 #
+d12OutputText = Label(root, text = "bazinga")
+d12OutputText.grid(row = 9, column = 1, pady = 2)
 
-d20 = Label(root, text = "How many d20 would you like to roll?")
-d20.grid(row = 11, column = 0, sticky = W, pady = 2)
-d20Input.grid(row = 11, column = 1)
+d20Text = Label(root, text = "How many d20 would you like to roll?", font='Calibri 10')
+d20Text.grid(row = 11, column = 0, sticky = W, pady = 2)
+d20Input.grid(row = 12, column = 0)
 #
+d20OutputText = Label(root, text = rollEm(d4))
+d20OutputText.grid(row = 11, column = 1, pady = 2)
 
 RollButton = Button(root, text= "Roll Em!", command=rollEm).grid()
 
