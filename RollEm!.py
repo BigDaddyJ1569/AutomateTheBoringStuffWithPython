@@ -75,9 +75,10 @@ d4Text = Label(root, text = "How many d4 would you like to roll?", font='Calibri
 d4Text.grid(row = 1, column = 0, sticky = W, pady = 2)
 #d4Input.grid(row = 1, column = 1, pady = 2)
 d4Input.grid(row = 2, column = 0)
+
 #gui d4 output
 #d4Output = diceRanges(d4)
-d4OutputText = Label(root, text = "bazinga")
+d4OutputText = Label(root, text = d4Input)
 #d4OutputText.grid(row = 2, column = 0, pady = 2)
 d4OutputText.grid(row = 1, column = 1, pady = 2)
 
